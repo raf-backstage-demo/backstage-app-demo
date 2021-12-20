@@ -28,8 +28,11 @@ FROM node:14-buster-slim
 
 WORKDIR /app
 
+RUN chmod 777 /app
+
 # Copy the install dependencies from the build stage and context
 COPY --from=build /app/yarn.lock /app/package.json /app/packages/backend/dist/skeleton.tar.gz ./
+
 RUN tar xzf skeleton.tar.gz && rm skeleton.tar.gz
 
 RUN yarn install --frozen-lockfile --production --network-timeout 600000 && rm -rf "$(yarn cache dir)"
