@@ -28,8 +28,6 @@ FROM node:14-buster-slim
 
 WORKDIR /app
 
-RUN chmod 777 /app
-
 # Copy the install dependencies from the build stage and context
 COPY --from=build /app/yarn.lock /app/package.json /app/packages/backend/dist/skeleton.tar.gz ./
 
@@ -43,5 +41,7 @@ RUN tar xzf bundle.tar.gz && rm bundle.tar.gz
 
 # Copy any other files that we need at runtime
 COPY app-config.yaml ./
+
+RUN chmod -R a+rX /app
 
 CMD ["node", "packages/backend", "--config", "app-config.yaml"]
