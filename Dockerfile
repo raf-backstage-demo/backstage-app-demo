@@ -44,4 +44,4 @@ COPY app-config.yaml ./
 
 RUN chmod -R a+rwX /app
 
-CMD ["node", "packages/backend"]
+CMD ["node", "packages/backend", "--config", "app-config.yaml"]
