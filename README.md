@@ -8,3 +8,11 @@ To start the app, run:
 yarn install
 yarn dev
 ```
+
+
+To build the docker image run:
+
+```shell
+docker build . -t quay.io/raffaelespazzoli/backstage:latest --no-cache
+docker push quay.io/raffaelespazzoli/backstage:latest
+```
