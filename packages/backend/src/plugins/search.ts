@@ -5,11 +5,12 @@ import {
   LunrSearchEngine,
 } from '@backstage/plugin-search-backend-node';
 import { PluginEnvironment } from '../types';
-import { DefaultCatalogCollator } from '@backstage/plugin-catalog-backend';
-import { DefaultTechDocsCollator } from '@backstage/plugin-techdocs-backend';
+import { DefaultCatalogCollatorFactory } from '@backstage/plugin-catalog-backend';
+import { DefaultTechDocsCollatorFactory } from '@backstage/plugin-techdocs-backend';
 
 export default async function createPlugin({
   logger,
+  permissions,
   discovery,
   config,
   tokenManager,
@@ -22,7 +23,7 @@ export default async function createPlugin({
   // collator gathers entities from the software catalog.
   indexBuilder.addCollator({
     defaultRefreshIntervalSeconds: 600,
-    collator: DefaultCatalogCollator.fromConfig(config, {
+    factory: DefaultCatalogCollatorFactory.fromConfig(config, {
       discovery,
       tokenManager,
     }),
@@ -31,7 +32,7 @@ export default async function createPlugin({
   // collator gathers entities from techdocs.
   indexBuilder.addCollator({
     defaultRefreshIntervalSeconds: 600,
-    collator: DefaultTechDocsCollator.fromConfig(config, {
+    factory: DefaultTechDocsCollatorFactory.fromConfig(config, {
       discovery,
       logger,
       tokenManager,
@@ -49,6 +50,9 @@ export default async function createPlugin({
 
   return await createRouter({
     engine: indexBuilder.getSearchEngine(),
+    types: indexBuilder.getDocumentTypes(),
+    permissions,
+    config,
     logger,
   });
 }
