@@ -32,3 +32,5 @@ https://backstage.io/docs/getting-started/configuration#setting-up-authenticatio
 https://backstage.io/docs/integrations/github/discovery
 
 https://github.com/backstage/backstage/tree/master/plugins/github-actions#standalone-app-requirements
+
+https://backstage.io/docs/auth/identity-resolver#resolving-membership-through-the-catalog
