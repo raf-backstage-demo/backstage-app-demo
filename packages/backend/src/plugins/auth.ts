@@ -29,7 +29,7 @@ export default async function createPlugin(
 
             // Resolve group membership from the Backstage catalog
             const fullEnt = await ctx.catalogIdentityClient.resolveCatalogMembership({
-              entityRefs: [id],
+              entityRefs: [userEntityRef],
               logger: ctx.logger,
             });
             const token = await ctx.tokenIssuer.issueToken({
