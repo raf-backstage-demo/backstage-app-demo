@@ -17,7 +17,8 @@ export default async function createPlugin(
       github: createGithubProvider({
         signIn: {
           resolver: async ({ profile: { email } }, ctx) => {
-            const [id] = email?.split('@') ?? '';
+            if (email===undefined) throw TypeError("undefined email")
+            const [id] = email.split('@');
             const userEntityRef = stringifyEntityRef({
               kind: 'User',
               namespace: DEFAULT_NAMESPACE,
