@@ -29,6 +29,8 @@ https://backstage.io/docs/features/kubernetes/installation
 
 https://backstage.io/docs/getting-started/configuration#setting-up-authentication
 
+https://backstage.io/docs/auth/#adding-the-provider-to-the-sign-in-page
+
 https://backstage.io/docs/integrations/github/discovery
 
 https://github.com/backstage/backstage/tree/master/plugins/github-actions#standalone-app-requirements
