@@ -72,6 +72,10 @@ import { EntityKubernetesContent } from '@backstage/plugin-kubernetes';
 
 import { EntitySonarQubeCard } from '@backstage/plugin-sonarqube';
 
+import { EntitySecurityInsightsContent } from '@roadiehq/backstage-plugin-security-insights';
+
+import { EntityGithubPullRequestsContent } from '@roadiehq/backstage-plugin-github-pull-requests';
+
 const cicdContent = (
   // This is an example of how you can implement your company's logic in entity page.
   // You can for example enforce that all components of type 'service' should use GitHubActions
@@ -174,6 +178,16 @@ const serviceEntityPage = (
           <EntityDependsOnResourcesCard variant="gridItem" />
         </Grid>
       </Grid>
+    </EntityLayout.Route>
+
+    <EntityLayout.Route
+      path="/security-insights"
+      title="Security Insights">
+      <EntitySecurityInsightsContent />
+    </EntityLayout.Route>    
+
+    <EntityLayout.Route path="/pull-requests" title="Pull Requests">
+      <EntityGithubPullRequestsContent />
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/docs" title="Docs">
