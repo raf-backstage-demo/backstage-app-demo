@@ -1381,7 +1381,7 @@
     "@material-ui/icons" "^4.9.1"
     react-router-dom "6.0.0-beta.0"
 
-"@backstage/backend-common@^0.13.2", "@backstage/backend-common@^0.13.2-next.0":
+"@backstage/backend-common@^0.13.0", "@backstage/backend-common@^0.13.2", "@backstage/backend-common@^0.13.2-next.0":
   version "0.13.2"
   resolved "https://registry.yarnpkg.com/@backstage/backend-common/-/backend-common-0.13.2.tgz#c3619dee671936f306f49eae9c8bbde436cbc40d"
   integrity sha512-FblxaHCw29N4ME1uHb+513EXcbn30vA224+6cj8159Wje2Rcv8EdMFtuf2awCNcYgoIdDD/R1wwBPeRmZhtERw==
@@ -2141,7 +2141,7 @@
     yn "^4.0.0"
     yup "^0.32.9"
 
-"@backstage/plugin-scaffolder-backend@^1.0.1-next.0":
+"@backstage/plugin-scaffolder-backend@^1.0.0", "@backstage/plugin-scaffolder-backend@^1.0.1-next.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-scaffolder-backend/-/plugin-scaffolder-backend-1.1.0.tgz#6ae9dd3aaa0d3872567217174b80b8e2ed7e24d0"
   integrity sha512-Jt1TthxzxxfxOGh46ZkmHFmdGl48tyObgO5MCqntoITzp5Plbm0/Kx4jwAJ3CFfLonulJ+tA91g63MBOYueugw==
@@ -4842,6 +4842,31 @@
   resolved "https://registry.yarnpkg.com/@rjsf/material-ui/-/material-ui-3.2.1.tgz#84fbf322485aee3a84101e189161f0687779ec8d"
   integrity sha512-8UiDeDbjCImFSfOegGu13otQ7OdP9FOYpcLjeouppnhs+MPeIEAtYS+jCcBKmi3reyTagC15/KVSRhde1wS1vg==
 
+"@roadiehq/scaffolder-backend-module-http-request@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@roadiehq/scaffolder-backend-module-http-request/-/scaffolder-backend-module-http-request-3.0.1.tgz#efb9bea7176eb51cc622750a9184c3e3beef3b96"
+  integrity sha512-MqBcYlalN0qo9RIxurGYmgnwYk5OTkq0Z1wURcnJ6QhMDpfNu2Z6+lKRWnqH8NFjX6QRE9sZnuPH0Lu4u9Q8kw==
+  dependencies:
+    "@backstage/backend-common" "^0.13.0"
+    "@backstage/config" "^1.0.0"
+    "@backstage/plugin-scaffolder-backend" "^1.0.0"
+    cross-fetch "^3.1.4"
+    winston "^3.2.1"
+
+"@roadiehq/scaffolder-backend-module-utils@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@roadiehq/scaffolder-backend-module-utils/-/scaffolder-backend-module-utils-1.0.1.tgz#00e43f2914b3eacea5860090189edd921abd6c9e"
+  integrity sha512-iMh3unmDk0aP/NLvxMrExy+qEaHPe0cm4zI/6pFULgaQQDHkMb67jeo8H+twcfr+pRlOfFaMZ4cEOi4ZKVTYrg==
+  dependencies:
+    "@backstage/backend-common" "^0.13.0"
+    "@backstage/config" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
+    "@backstage/plugin-scaffolder-backend" "^1.0.0"
+    adm-zip "^0.5.9"
+    cross-fetch "^3.1.4"
+    fs-extra "^10.0.0"
+    winston "^3.2.1"
+
 "@rollup/plugin-commonjs@^21.0.1":
   version "21.0.2"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-21.0.2.tgz#0b9c539aa1837c94abfaf87945838b0fc8564891"
@@ -6322,6 +6347,11 @@ address@^1.0.1, address@^1.1.2:
   resolved "https://registry.yarnpkg.com/address/-/address-1.1.2.tgz#bf1116c9c758c51b7a933d296b72c221ed9428b6"
   integrity sha512-aT6camzM4xEA54YVJYSqxz1kv4IHnQZRtThJJHhUMRExaU5spC7jX5ugSwTaTgJliIgs4VhZOk7htClvQ/LmRA==
 
+adm-zip@^0.5.9:
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.5.9.tgz#b33691028333821c0cf95c31374c5462f2905a83"
+  integrity sha512-s+3fXLkeeLjZ2kLjCBwQufpI5fuN+kIGBxu6530nVQZGVol0d7Y/M88/xw9HGGUcJjKf8LutN3VPRUBq6N7Ajg==
+
 agent-base@6, agent-base@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-6.0.2.tgz#49fff58577cfee3f37176feab4c22e00f86d7f77"
@@ -6486,6 +6516,7 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     "@backstage/plugin-permission-react" "^0.4.0"
     "@backstage/plugin-scaffolder" "^1.0.1-next.0"
     "@backstage/plugin-search" "^0.8.0"
+    "@backstage/plugin-sonarqube" "^0.3.4"
     "@backstage/plugin-tech-radar" "^0.5.11-next.0"
     "@backstage/plugin-techdocs" "^1.0.1-next.0"
     "@backstage/plugin-user-settings" "^0.4.3-next.0"
@@ -8306,7 +8337,7 @@ cross-env@^7.0.0:
   dependencies:
     cross-spawn "^7.0.1"
 
-cross-fetch@^3.1.5:
+cross-fetch@^3.1.4, cross-fetch@^3.1.5:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.5.tgz#e1389f44d9e7ba767907f7af8454787952ab534f"
   integrity sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==

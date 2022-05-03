@@ -35,13 +35,15 @@
     "@backstage/plugin-techdocs-backend": "^1.0.1-next.0",
     "@gitbeaker/node": "^34.6.0",
     "@octokit/rest": "^18.5.3",
+    "@roadiehq/scaffolder-backend-module-http-request": "^3.0.1",
+    "@roadiehq/scaffolder-backend-module-utils": "^1.0.1",
     "@vscode/sqlite3": "^5.0.7",
-    "app": "link:../app",    
+    "app": "link:../app",
+    "better-sqlite3": "^7.5.0",
     "dockerode": "^3.3.1",
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",
     "luxon": "^2.0.2",
-    "better-sqlite3": "^7.5.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
