@@ -76,6 +76,8 @@ import { EntitySecurityInsightsContent } from '@roadiehq/backstage-plugin-securi
 
 import { EntityGithubPullRequestsContent } from '@roadiehq/backstage-plugin-github-pull-requests';
 
+import { EntityPrometheusContent } from '@roadiehq/backstage-plugin-prometheus';
+
 const cicdContent = (
   // This is an example of how you can implement your company's logic in entity page.
   // You can for example enforce that all components of type 'service' should use GitHubActions
@@ -178,6 +180,10 @@ const serviceEntityPage = (
           <EntityDependsOnResourcesCard variant="gridItem" />
         </Grid>
       </Grid>
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="/prometheus" title="Component Metrics">
+      <EntityPrometheusContent />
     </EntityLayout.Route>
 
     <EntityLayout.Route
