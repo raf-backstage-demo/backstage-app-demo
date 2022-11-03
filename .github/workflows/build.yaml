@@ -53,4 +53,4 @@ jobs:
       run: kosli pipeline artifact report creation ghcr.io/${{ github.repository_owner }}/${{ env.REPOSITORY_NAME }}:${{ github.sha }} -t docker -p ${{ env.REPOSITORY_NAME }}
 
     - name: report chek for pull request existence
-      run: kosli pipeline artifact report evidence github-pullrequest ghcr.io/${{ github.repository_owner }}/${{ env.REPOSITORY_NAME }}:${{ github.sha }} -t docker -p ${{ env.REPOSITORY_NAME }}      
+      run: kosli pipeline artifact report evidence github-pullrequest ghcr.io/${{ github.repository_owner }}/${{ env.REPOSITORY_NAME }}:${{ github.sha }} -t docker -p ${{ env.REPOSITORY_NAME }} --github-token ${{ secrets.GITHUB_TOKEN }} -e pull-requests    
