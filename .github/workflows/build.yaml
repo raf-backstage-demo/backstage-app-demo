@@ -23,7 +23,7 @@ jobs:
     - name: setup kosli
       uses: kosli-dev/setup-cli-action@v1
     - name: declare pipeline
-      run: kosli pipeline declare --p ${{ env.REPOSITORY_NAME }} -t pull-request,artifact
+      run: kosli pipeline declare --pipeline ${{ env.REPOSITORY_NAME }} -t pull-request,artifact
 
 
     
